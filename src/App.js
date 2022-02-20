@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { fetchWeather } from "./api/fetchWeather";
+import "./app.css";
 
-function App() {
+const App = () => {
+  const [cityWeather, setCityWeather] = useState('');
+
+  const getCity = async (e) => {
+    if (e.key === "Enter") {
+      const city = await fetchWeather(cityWeather);
+      console.log("city is ", city);
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-container">
+      <input
+        className="search"
+        type="text"
+        value={cityWeather}
+        onChange={(e) => setCityWeather(e.target.value)}
+        onKeyPress={getCity}
+        placeholder="Enter city"
+      />
     </div>
   );
-}
+};
 
 export default App;
