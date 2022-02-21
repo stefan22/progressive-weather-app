@@ -13,7 +13,7 @@ const App = () => {
   };
 
   return (
-    <div className="main-container">
+    <div className="main-container"> 
       <input
         className="search"
         type="text"
