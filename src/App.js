@@ -20,7 +20,7 @@ const App = () => {
     const city = localStorage.getItem(query);
     const initCity = JSON.parse(city) || "";
     updateCity(initCity);
-  }, [query, updateCity]);
+  }, [query]);
 
   const getCity = async (e) => {
     if (e.key === "Enter") {
