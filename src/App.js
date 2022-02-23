@@ -5,13 +5,13 @@ import "./app.css";
 const App = () => {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
-  const [error, setError] = useState({});
+
 
   useEffect(() => {
     //adding query to localStorage
     if (weather.name !== undefined)
       localStorage.setItem(query, JSON.stringify(weather));
-  }, [weather]);
+  }, [weather, query]);
 
   const updateCity = (val) =>
     query !== val.name ? setWeather(val) : setWeather({});
@@ -20,7 +20,7 @@ const App = () => {
     const city = localStorage.getItem(query);
     const initCity = JSON.parse(city) || "";
     updateCity(initCity);
-  }, [query]);
+  }, [query, updateCity]);
 
   const getCity = async (e) => {
     if (e.key === "Enter") {
@@ -39,7 +39,7 @@ const App = () => {
         const data = await response.json();
         setWeather(data);
       } catch (err) {
-        setError(err);
+          console.log(err);
       }
     }
   };

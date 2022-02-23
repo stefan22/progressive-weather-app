@@ -1,11 +1,11 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 
-<h2 align="center">PWA Weather application</h2>
+<h2 align="center">Building PWA apps</h2>
 
 <br />
 
-A **PWA** weather application that takes an input (`type:string cityName`) entered by a user, and returns its weather information.   
+A **PWA** React Weather Application, that takes an input (`type:string cityName`) entered by user, and returns its weather information.   
 Progressive web apps bring native-like features into a web application, and work regardless of network connectivity.
 
 
@@ -32,4 +32,23 @@ Build with Create React App
 <kbd>Screenshot</kbd>
 
 
-![PWA weather app](src/assets/images/weatherapp.png)
+![PWA weather app](src/assets/images/pwa-mobile.png)
+
+
+
+
+<br />
+
+----------------------------------------------------------------
+
+
+<kbd>Lighthouse</kbd>
+
+![PWA weather app](src/assets/images/Lighthouse-report.png)
+
+
+<br />
+
+
+
+![PWA weather app](src/assets/images/Lighthouse-PWA.png)
