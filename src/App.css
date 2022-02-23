@@ -1,26 +1,43 @@
 html,
-body,
-#root {
-  font: 0.9rem sans-serif;
-  background: #0a1f44;
-  color: #1e2432;
+body {
+  width: 100%;
   height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font: 16px;
+
+}
+#root {
+  font-size: 1rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.418)),
+    url('./assets/images/progressive.jpeg');
+  background-size: cover;
+  background-position: right;
+  width: 100%;
+  height: auto;
+  padding: 0;
   margin: 0;
 }
 
 .main-container {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.418)),
-    url('./assets/images/progressive.jpeg');
-  background-size: cover;
-  background-position: center;
-}
-
-.main-container {
-  height: 100%;
+  width: calc(100% - 32px);
+  height: 100vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 2.75rem;
+  color: #f2f2f2;
 }
 
 .search {
@@ -28,19 +45,44 @@ body,
   padding: 20px 7%;
   border-radius: 20px;
   border: none;
+  transition: all .2s linear 0ms;
   margin-bottom: 5%;
   background: rgba(250, 250, 250, 0.85);
 }
 
+.weather-heading {
+  display: flex;
+  width: 100%;
+  max-width: 330px;
+  justify-content: center;
+  align-items: center;
+  margin-right: -40px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 .city {
+  border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 40px 8%;
+  padding: 1rem;
+  transition: all .35s linear 15ms;
+  width: 100%;
+  letter-spacing: 1px;
   border-radius: 20px;
-  background: rgba(250, 250, 250, 0.85);
-  box-shadow: 10px 10px 5px 0px rgba(15, 15, 15, 0.404);
+  background: rgb(247 251 255);
+  box-shadow: 10px 10px 5px 0px rgb(15 15 15 / 40%);
+  max-width:525px;
 }
 
 p {
@@ -50,47 +92,83 @@ p {
 }
 
 .city-temp {
-  font-size: 5rem;
+  font-size: 7rem;
   font-weight: bold;
-  margin-top: 10px;
-  color: #1e2432;
+  color: #2196f3;
   text-align: center;
+  display: flex;
+  width: 100%;
+  margin-right: -40px;
+  justify-content: center;
+  max-width: 300px;
 }
 
-.city sup {
-  font-size: 0.5em;
+.city-temp sup {
+  font-size: 0.25em;
+  color: #1e2432;
+  margin: 5px 0px;
+  height: 50%;
+  
 }
 
 .city-name {
   font-size: 2em;
 }
 
+
+
 .city-name sup {
-  padding: 0.2em 0.6em;
-  margin-left: 0.2em;
+  padding: 1px 7px;
+  margin-left: 5px;
+  font-size: 1.25rem;
   border-radius: 30px;
   color: #fff;
-  background: #ff8c00;
+  background: #2196f3;
 }
 
-.city-icon {
-  margin-top: 10px;
-  width: 100px;
-  height: 100px;
-}
+
 
 .info {
   display: flex;
-  flex-direction: column;
+  width: 100%;
   align-items: center;
+  justify-content: space-around;
 }
 
-@media only screen and (max-width: 600px) {
+.info img {
+  width: 100%;
+  height: auto;
+  max-width: 80px;
+}
+
+.info p {
+  font-size: 1rem;
+  line-height: 40px;
+  margin: 0;
+  width: 33%;
+  text-align: center;
+  padding: 0 5px;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
   .search {
     padding: 20px 15%;
   }
-
   .city {
-    padding: 40px 20%;
+    border-radius: 10px;
   }
+  .main-container {
+    padding: 0 0 3rem;
+  }
+ 
+
+  
 }

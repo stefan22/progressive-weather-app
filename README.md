@@ -1,3 +1,35 @@
-##### Progressive Weather App - In metereology, ___progressive___ patterns move weak storm systems quicker... aside from rain, progressive web apps bring ___native-like___ features into your web application, and work regardless of network connectivity [PWA].
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-A simple and installable weather application that takes input entered by a user (a city) to render weather data in the screen on real-time.
+
+<h2 align="center">PWA Weather application</h2>
+
+<br />
+
+A **PWA** weather application that takes an input (`type:string cityName`) entered by a user, and returns its weather information.   
+Progressive web apps bring native-like features into a web application, and work regardless of network connectivity.
+
+
+
+## Installation 
+
+```js
+Build with Create React App
+```
+
+- Clone application 
+- Install dependencies and
+- Type `npm start`
+
+
+
+### Data
+
+- OpenWeather API
+
+
+<br />
+
+<kbd>Screenshot</kbd>
+
+
+![PWA weather app](src/assets/images/weatherapp.png)
