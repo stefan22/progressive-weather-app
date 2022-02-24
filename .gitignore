@@ -22,8 +22,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.env.*
+.env
 yarn.lock
 .vscode/
-**/api/apiKey.js
+*/api/apiKey.js
 
