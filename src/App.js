@@ -15,7 +15,8 @@ const App = () => {
   useEffect(() => {
     const updateCity = (val) =>
       query !== val.name ? setWeather(val) : setWeather({});
-
+    
+    //get cached data
     const city = localStorage.getItem(query);
     const initCity = JSON.parse(city) || "";
     updateCity(initCity);
