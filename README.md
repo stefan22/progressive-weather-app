@@ -12,7 +12,7 @@ A **PWA** React Weather Application, that takes an input (`type:string cityName`
 Progressive web apps bring native-like features into a web application, and work regardless of network connectivity.
 
 
-## Installation 
+## Installation 🥯
 
 ```js
 Build with Create React App
