@@ -1,12 +1,12 @@
 import { apiKey } from "./apiKey";
-//const apiKey = process.env.REACT_APP_API_KEY;
+const apiKey = process.env.REACT_APP_API_KEY;
 const URL = `https://api.openweathermap.org/data/2.5/weather?`;
 
 var requestOptions = {
   method: "GET",
 };
 
-const fetchWeather = async (city) => {
+const fetchWeather = async city => {
   const mode = "json";
   const units = "metric";
   const lang = "en";
